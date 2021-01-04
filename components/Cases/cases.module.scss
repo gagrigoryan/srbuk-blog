@@ -1,0 +1,88 @@
+@import "../../styles/vars";
+
+.container {
+  height: 50vh;
+  height: calc(var(--vh, 1vh) * 50);
+}
+
+.cases {
+  display: flex;
+  @include tabletMedia {
+    flex-direction: column;
+  }
+}
+
+.case {
+  position: relative;
+  background: $black;
+  cursor: pointer;
+  &:hover {
+    .caseImage {
+      opacity: 0.4;
+    }
+  }
+}
+
+.caseDetails {
+  width: 33.3333vw;
+  height: 50vh;
+  height: calc(var(--vh, 1vh) * 50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  z-index: 1;
+  position: relative;
+  @include tabletMedia {
+    width: 100vw;
+  }
+  @include phoneMedia {
+    padding: get-vw(16px);
+  }
+  span {
+    margin-top: 156px;
+    font-size: 1.6rem;
+    opacity: 0.8;
+    color: $white;
+    font-weight: 600;
+    @include tabletLargeMedia {
+      font-size: 1.4rem;
+    }
+    @include phoneMedia {
+      font-size: 1.2rem;
+      line-height: 2.2rem;
+    }
+  }
+  h2 {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    width: 85%;
+    margin-top: 16px;
+    color: $white;
+    @include tabletLargeMedia {
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+    @include phoneMedia {
+      font-size: 1.7rem;
+      line-height: 2.2rem;
+      margin-top: get-vw(8px);
+    }
+  }
+}
+
+.caseImage {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0.65;
+  transition: 0.4s cubic-bezier(0.6, -0.05, 0.1, 0.99);
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
