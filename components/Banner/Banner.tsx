@@ -1,4 +1,5 @@
 import React from "react";
+
 import Link from "next/link";
 import styles from "./banner.module.scss";
 import Arrow from "../icons/Arrow";
@@ -8,10 +9,10 @@ const Banner: React.FC = () => {
         <section className={styles.container}>
             <h2 className={styles.caption}>
                 <div className={styles.line}>
-                    <span>Lorem ipsum dolor sit</span>
+                    <span className="BannerSpan">Lorem ipsum dolor sit</span>
                 </div>
                 <div className={styles.line}>
-                    <span>perfe quas vel.</span>
+                    <span className="BannerSpan">perfe quas vel.</span>
                 </div>
             </h2>
             <div className={styles.link}>

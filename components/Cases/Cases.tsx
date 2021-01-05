@@ -36,7 +36,7 @@ const Cases: React.FC = () => {
                             <h2>{item.title}</h2>
                         </div>
                         <div className={styles.caseImage}>
-                            <img src={item.img} alt={item.title} />
+                            <img className="caseImage" src={item.img} alt={item.title} />
                         </div>
                     </div>
                 ))}
